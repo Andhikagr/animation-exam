@@ -97,7 +97,10 @@ class _FoodOneSplashState extends State<FoodOneSplash>
     return AddToCartAnimation(
       cartKey: cartKey,
 
-      jumpAnimation: JumpAnimationOptions(active: false),
+      jumpAnimation: JumpAnimationOptions(
+        active: false,
+        duration: Duration(milliseconds: 300),
+      ),
       createAddToCartAnimation: (runAddToCartAnimation) {
         this.runAddToCartAnimation = runAddToCartAnimation;
       },
@@ -304,6 +307,7 @@ class _FoodOneSplashState extends State<FoodOneSplash>
                     ),
                   ),
                   SizedBox(height: 15),
+
                   SizedBox(
                     height: 40,
                     child: ListView.builder(
@@ -317,7 +321,8 @@ class _FoodOneSplashState extends State<FoodOneSplash>
                               selectTopping = index;
                             });
                           },
-                          child: Container(
+                          child: AnimatedContainer(
+                            duration: Duration(milliseconds: 800),
                             margin: EdgeInsets.symmetric(horizontal: 10),
                             width: 100,
                             decoration: BoxDecoration(
@@ -329,7 +334,12 @@ class _FoodOneSplashState extends State<FoodOneSplash>
                             ),
                             child: Center(
                               child: TextOrder(
-                                textItem: toppingItem[index]["name"],
+                                textItem: selectTop
+                                    ? ((toppingItem[index]["price"] as num) == 0
+                                          ? ""
+                                          : (toppingItem[index]["price"] as num)
+                                                .toRupiah())
+                                    : toppingItem[index]["name"],
                                 colorItem: selectTop
                                     ? Colors.grey.shade900
                                     : Colors.grey.shade200,

@@ -8,6 +8,8 @@ class FormatRupiah extends TextInputFormatter {
     decimalDigits: 0,
   );
 
+  FormatRupiah(toppingItem);
+
   @override
   TextEditingValue formatEditUpdate(
     TextEditingValue oldValue,

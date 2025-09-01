@@ -51,9 +51,10 @@ final List<Map<String, dynamic>> burgerItems = [
 ];
 
 final List<Map<String, dynamic>> toppingItem = [
-  {"name": "Ayam", "price": 5000},
+  {"name": "Tidak Pakai", "price": 0},
+  {"name": "Telor", "price": 3000},
+  {"name": "Ayam", "price": 4000},
+  {"name": "Udang", "price": 4000},
+  {"name": "Cumi", "price": 4000},
   {"name": "Daging", "price": 7000},
-  {"name": "Telor", "price": 4000},
-  {"name": "Udang", "price": 8000},
-  {"name": "Cumi", "price": 8500},
 ];
