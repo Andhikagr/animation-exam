@@ -1,3 +1,5 @@
+import 'package:animation_exam/food_one/food_one_splash.dart';
+// ignore: unused_import
 import 'package:animation_exam/simple/simple_splash.dart';
 // ignore: unused_import
 import 'package:animation_exam/travel/travel_splash.dart';
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(useMaterial3: true),
       home:
           // TravelSplash(),
-          SimpleSplash(),
+          // SimpleSplash(),
+          FoodOneSplash(),
     );
   }
 }

@@ -90,7 +90,7 @@ class _SimpleSplashState extends State<SimpleSplash>
               right: 0,
               left: 0,
               child: Padding(
-                padding: EdgeInsetsGeometry.symmetric(horizontal: 24),
+                padding: EdgeInsets.symmetric(horizontal: 24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
